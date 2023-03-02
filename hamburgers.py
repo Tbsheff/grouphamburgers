@@ -8,3 +8,18 @@ class Order():
     
     def randomBurger():
         return rd(1,20)
+
+
+class Customer ():
+    
+    pass
+
+
+lstHamburgerQueue = []
+
+iNumCustomers = 100
+
+while iNumCustomers > 0 :
+    
+    lstHamburgerQueue.append(Customer())
+    iNumCustomers -=1
