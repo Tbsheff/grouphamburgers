@@ -6,9 +6,9 @@ class Order():
     def __init__(self):
         self.burger_count = self.randomBurger()
     
-    def randomBurger():
-        return rd.randint(1,20)
-from random import randint as rd
+    def randomBurger(self):
+        return random.randint(1,20)
+
 
 
 class Person():
@@ -23,9 +23,10 @@ class Person():
 
 
 class Customer(Person):
-    def _innit__(self):
-        super().__innit__() 
+    def __init__(self):
+        super().__init__() 
         self.order = Order()
+        self.numBurgers = 0
 
 
 
@@ -47,11 +48,12 @@ dictCustomers = {
 
 iNumCustomers = 0
 
+
+
 while iNumCustomers < 100 :
     lstHamburgerQueue.append(Customer())
-    print(lstHamburgerQueue[iNumCustomers].customer_name)
     if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
-        dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
+        dictCustomers[lstHamburgerQueue[iNumCustomers]].update() #+= lstHamburgerQueue[iNumCustomers].numBurgers
     iNumCustomers += 1
 
 
