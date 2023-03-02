@@ -23,9 +23,11 @@ class Person():
 
 
 class Customer(Person):
-    def _innit__(self, iCustomers):
+    def _init__(self):
         super().__innit__() 
         self.order = Order()
+
+
 
 
 
@@ -43,17 +45,13 @@ dictCustomers = {
     "Singing Bush" : 0
 }
 
-iNumCustomers = 100
+iNumCustomers = 0
 
-for iCount in range(0,iNumCustomers):
+while iNumCustomers > 0:
 
     lstHamburgerQueue.append(Customer())
-    if lstHamburgerQueue[iCount].customer_name in dictCustomers:
-        dictCustomers[lstHamburgerQueue[iCount].customer_name] += lstHamburgerQueue[iCount].order.burger_count
+    iNumCustomers -= 1
+    if Customer.customer_name in dictCustomers:
+        dictCustomers[Customer.customer_name] += Customer.order 
 
-
-listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1], reverse=True) 
-
-# for iCount in listSortedCustomers:
-#     print(f'{listSortedCustomers[iCount].ljust(19) }') 
 #print(f"{name} {burgers}")
