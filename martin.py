@@ -26,3 +26,7 @@ class Customer(Person):
     #"customer8" : "Invisible Swordsman",
     #"customer9" : "Singing Bush"
 #}
+#    if name in customer_info:
+#        customer_info[name] += burgers
+#    else:
+#        customer_info[name] = burgers
