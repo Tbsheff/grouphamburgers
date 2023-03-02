@@ -9,6 +9,14 @@ class Order():
     def randomBurger():
         return rd.randint(1,20)
 
+class Person():
+    #constructor
+    def __init__(self) :
+        self.customer_name = self.randomName()    
+    #method
+    def randomName() :
+        lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
+        return rd.choice(lstCustomers)
 
 class Customer ():
     
