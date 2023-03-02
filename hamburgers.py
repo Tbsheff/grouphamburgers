@@ -23,9 +23,11 @@ class Person():
 
 
 class Customer(Person):
-    def _init__(self):
+    def _innit__(self):
         super().__innit__() 
         self.order = Order()
+
+
 
 
 
@@ -33,7 +35,7 @@ lstHamburgerQueue = []
 
 dictCustomers = {
     "Jefe" : 0,
-    "el Guapo" : 0,
+    "El Guapo" : 0,
     "Lucky Day" : 0,
     "Ned Nederlander" : 0,
     "Dusty Bottoms" : 0,
@@ -43,13 +45,17 @@ dictCustomers = {
     "Singing Bush" : 0
 }
 
-iNumCustomers = 100
+iNumCustomers = 0
 
-while iNumCustomers > 0:
-
+while iNumCustomers < 100 :
     lstHamburgerQueue.append(Customer())
-    iNumCustomers -= 1
-    if Customer.customer_name in dictCustomer:
-        dictCustomers[Customer.customer_name] += Customer.order 
+    print(lstHamburgerQueue[iNumCustomers].customer_name)
+    if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
+        dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
+    iNumCustomers += 1
 
+
+listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1], reverse=True)
+
+print(listSortedCustomers) 
 #print(f"{name} {burgers}")
