@@ -1,6 +1,6 @@
 # Group 7 Hamburger Project
 
-import random as rd 
+import random
 
 class Order():
     def __init__(self):
@@ -15,31 +15,30 @@ class Person():
     #constructor
     def __init__(self) :
         self.customer_name = self.randomName()    
-    #create method with customer names & randomly choose 1st customer
+    #method
     def randomName() :
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
-        return rd.choice(lstCustomers)
+        return random.choice(lstCustomers)
 
 
 
 class Customer(Person):
-    def _init__(self, iCustomers):
+    def _innit__(self, iCustomers):
         super().__innit__() 
         self.order = Order()
-        self.customerID = iCustomers
 
 
 
 lstHamburgerQueue = []
 
 dictCustomersOrders = {
-    "customerName" : [], "customerBurgers" : []
+    
 }
 
 iNumCustomers = 100
 
 while iNumCustomers > 0:
 
-    lstHamburgerQueue.append(Customer(iNumCustomers))
-
+    lstHamburgerQueue.append(Customer())
     iNumCustomers -= 1
+

@@ -15,3 +15,15 @@ class Person():
     def randomName() :
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
         return rd.choice(lstCustomers)
+    
+
+    lstHamburgerQueue = []
+
+iNumCustomers = 100
+
+while iNumCustomers > 0:
+
+    lstHamburgerQueue.append(Customer(iNumCustomers))
+    iNumCustomers -= 1
+    if customer.customer_name in dictCustomer:
+        dictCustomers[customer.customer_name] += customer.order 
