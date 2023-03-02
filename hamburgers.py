@@ -15,7 +15,7 @@ class Person():
     #constructor
     def __init__(self) :
         self.customer_name = self.randomName()    
-    #method
+    #create method with customer names & randomly choose 1st customer
     def randomName() :
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
         return rd.choice(lstCustomers)
@@ -23,7 +23,7 @@ class Person():
 
 
 class Customer(Person):
-    def _innit__(self, iCustomers):
+    def _init__(self, iCustomers):
         super().__innit__() 
         self.order = Order()
         self.customerID = iCustomers
