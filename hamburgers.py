@@ -10,10 +10,12 @@ class Order():
         return rd(1,20)
 
 
-class Customer ():
-    
-    pass
 
+
+class Customer(Person): 
+    def _innit__ (self): 
+      super().__innit__()
+      self.order = Order()
 
 lstHamburgerQueue = []
 
@@ -24,7 +26,3 @@ while iNumCustomers > 0 :
     lstHamburgerQueue.append(Customer())
     iNumCustomers -=1
 
-class Customer(Person): 
-    def _innit__ (self): 
-      super().__innit__()
-      self.order = Order()
