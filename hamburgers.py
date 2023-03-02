@@ -52,3 +52,4 @@ while iNumCustomers > 0:
     if Customer.customer_name in dictCustomer:
         dictCustomers[Customer.customer_name] += Customer.order 
 
+#print(f"{name} {burgers}")
