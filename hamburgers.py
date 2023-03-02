@@ -23,8 +23,8 @@ class Person():
 
 
 class Customer(Person):
-    def _innit__(self):
-        super().__innit__() 
+    def _init__(self):
+        super().__init__() 
         self.order = Order()
 
 
