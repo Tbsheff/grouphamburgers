@@ -23,3 +23,4 @@ while iNumCustomers > 0 :
     
     lstHamburgerQueue.append(Customer())
     iNumCustomers -=1
+
