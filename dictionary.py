@@ -1,14 +1,14 @@
 
 # Create Dictionary
 dictCustomers = {
-    "Jefe" : ,
-    "l Guapo" : ,
-    "Lucky Day" : ,
-    "Ned Nederlander" : ,
-    "Dusty Bottoms" : ,
-    "Harry Flugleman" : ,
-    "Carmen" : ,
-    "Invisible Swordsman" : ,
-    "Singing Bush" : 
+    "Jefe" : 0,
+    "el Guapo" : 0,
+    "Lucky Day" : 0,
+    "Ned Nederlander" : 0,
+    "Dusty Bottoms" : 0,
+    "Harry Flugleman" : 0,
+    "Carmen" : 0,
+    "Invisible Swordsman" : 0,
+    "Singing Bush" : 0
 }
 
