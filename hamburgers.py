@@ -32,9 +32,15 @@ class Customer(Person):
 
 lstHamburgerQueue = []
 
+dictCustomersOrders = {
+    "customerName" : [], "customerBurgers" : []
+}
+
 iNumCustomers = 100
 
 while iNumCustomers > 0:
 
     lstHamburgerQueue.append(Customer(iNumCustomers))
+    print(dictCustomersOrders["customerName"].append(lstHamburgerQueue[iNumCustomers].customer_name))
+
     iNumCustomers -= 1
