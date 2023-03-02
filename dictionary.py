@@ -2,7 +2,7 @@
 # Create Dictionary
 dictCustomers = {
     "customer1" : Jefe,
-    "customer2" : l Guapo,
+    "customer2" : El Guapo,
     "customer3" : Lucky Day,
     "customer4" : Ned Nederlander,
     "customer5" : Dusty Bottoms,
