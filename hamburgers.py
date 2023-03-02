@@ -33,7 +33,7 @@ lstHamburgerQueue = []
 
 dictCustomers = {
     "Jefe" : 0,
-    "el Guapo" : 0,
+    "El Guapo" : 0,
     "Lucky Day" : 0,
     "Ned Nederlander" : 0,
     "Dusty Bottoms" : 0,
