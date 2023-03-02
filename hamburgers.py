@@ -8,7 +8,6 @@ class Order():
     
     def randomBurger():
         return rd.randint(1,20)
-from random import randint as rd
 
 
 class Person():
