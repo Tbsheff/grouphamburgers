@@ -16,14 +16,14 @@ class Person():
     def __init__(self) :
         self.customer_name = self.randomName()    
     #method
-    def randomName(self) :
+    def randomName() :
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
         return random.choice(lstCustomers)
 
 
 
 class Customer(Person):
-    def _innit__(self):
+    def _innit__(self, iCustomers):
         super().__innit__() 
         self.order = Order()
 
@@ -33,7 +33,7 @@ lstHamburgerQueue = []
 
 dictCustomers = {
     "Jefe" : 0,
-    "el Guapo" : 0,
+    "El Guapo" : 0,
     "Lucky Day" : 0,
     "Ned Nederlander" : 0,
     "Dusty Bottoms" : 0,
@@ -52,3 +52,4 @@ while iNumCustomers > 0:
     if Customer.customer_name in dictCustomers:
         dictCustomers[Customer.customer_name] += Customer.order 
 
+#print(f"{name} {burgers}")
