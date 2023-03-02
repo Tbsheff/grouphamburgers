@@ -24,7 +24,7 @@ class Person():
 
 class Customer(Person):
     def _innit__(self, iCustomers):
-        super().__innit__()
+        super().__innit__() 
         self.order = Order()
         self.customerID = iCustomers
 
@@ -41,6 +41,5 @@ iNumCustomers = 100
 while iNumCustomers > 0:
 
     lstHamburgerQueue.append(Customer(iNumCustomers))
-    print(dictCustomersOrders["customerName"].append(lstHamburgerQueue[iNumCustomers].customer_name))
 
     iNumCustomers -= 1
