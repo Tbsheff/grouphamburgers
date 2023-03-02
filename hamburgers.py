@@ -16,16 +16,18 @@ class Person():
     def __init__(self) :
         self.customer_name = self.randomName()    
     #method
-    def randomName() :
+    def randomName(self) :
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms", "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"] 
         return random.choice(lstCustomers)
 
 
 
 class Customer(Person):
-    def _innit__(self, iCustomers):
+    def _innit__(self):
         super().__innit__() 
         self.order = Order()
+
+
 
 
 
@@ -43,13 +45,17 @@ dictCustomers = {
     "Singing Bush" : 0
 }
 
-iNumCustomers = 100
+iNumCustomers = 0
 
-while iNumCustomers > 0:
-
+while iNumCustomers < 100 :
     lstHamburgerQueue.append(Customer())
-    iNumCustomers -= 1
-    if Customer.customer_name in dictCustomers:
-        dictCustomers[Customer.customer_name] += Customer.order 
+    print(lstHamburgerQueue[iNumCustomers].customer_name)
+    if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
+        dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
+    iNumCustomers += 1
 
+
+listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1], reverse=True)
+
+print(listSortedCustomers) 
 #print(f"{name} {burgers}")
