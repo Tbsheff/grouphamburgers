@@ -49,7 +49,7 @@ while iNumCustomers > 0:
 
     lstHamburgerQueue.append(Customer())
     iNumCustomers -= 1
-    if Customer.customer_name in dictCustomer:
+    if Customer.customer_name in dictCustomers:
         dictCustomers[Customer.customer_name] += Customer.order 
 
 #print(f"{name} {burgers}")
