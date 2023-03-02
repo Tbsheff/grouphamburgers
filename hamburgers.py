@@ -7,8 +7,7 @@ class Order():
         self.burger_count = self.randomBurger()
     
     def randomBurger():
-        return rd.randint(1,20)
-from random import randint as rd
+        return random.randint(1,20)
 
 
 class Person():
@@ -23,11 +22,9 @@ class Person():
 
 
 class Customer(Person):
-    def _init__(self):
-        super().__innit__() 
+    def __init__(self):
+        super().__init__() 
         self.order = Order()
-
-
 
 
 
@@ -45,13 +42,17 @@ dictCustomers = {
     "Singing Bush" : 0
 }
 
-iNumCustomers = 0
+iNumCustomers = 100
 
-while iNumCustomers > 0:
+for iCount in range(0,iNumCustomers):
 
     lstHamburgerQueue.append(Customer())
-    iNumCustomers -= 1
-    if Customer.customer_name in dictCustomers:
-        dictCustomers[Customer.customer_name] += Customer.order 
+    if lstHamburgerQueue[iCount].customer_name in dictCustomers:
+        dictCustomers[lstHamburgerQueue[iCount].customer_name] += lstHamburgerQueue[iCount].order.burger_count
 
+
+listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1], reverse=True) 
+
+# for iCount in listSortedCustomers:
+#     print(f'{listSortedCustomers[iCount].ljust(19) }') 
 #print(f"{name} {burgers}")
