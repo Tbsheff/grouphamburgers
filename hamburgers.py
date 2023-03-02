@@ -8,3 +8,8 @@ class Order():
     
     def randomBurger():
         return rd(1,20)
+
+class Customer(Person): 
+    def _innit__ (self): 
+      super().__innit__()
+      self.order = Order()
