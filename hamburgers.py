@@ -10,8 +10,9 @@ class Order():
     def randomBurger():
         return rd(1, 20)
 
-class Person :
-    
+
+class Person:
+
     pass
 
 
@@ -22,6 +23,12 @@ class Customer(Person):
         self.customerID = iCustomers
 
 
+class Customer(Person):
+    def _innit__(self):
+        super().__innit__()
+        self.order = Order()
+
+
 lstHamburgerQueue = []
 
 iNumCustomers = 100
@@ -30,4 +37,3 @@ while iNumCustomers > 0:
 
     lstHamburgerQueue.append(Customer(iNumCustomers))
     iNumCustomers -= 1
-
