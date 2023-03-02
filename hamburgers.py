@@ -47,8 +47,9 @@ iNumCustomers = 100
 for iCount in range(0,iNumCustomers):
 
     lstHamburgerQueue.append(Customer())
-    if lstHamburgerQueue[iCount].customer_name in dictCustomers:
-        dictCustomers[lstHamburgerQueue[iCount].customer_name] += lstHamburgerQueue[iCount].order.burger_count
+    if lstHamburgerQueue[0].customer_name in dictCustomers:
+        dictCustomers[lstHamburgerQueue[0].customer_name] += lstHamburgerQueue[0].order.burger_count
+    lstHamburgerQueue.pop(0)
 
 
 listSortedCustomers = sorted(dictCustomers.items(), key=lambda x: x[1], reverse=True) 
