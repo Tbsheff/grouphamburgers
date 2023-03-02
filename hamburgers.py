@@ -1,30 +1,33 @@
 # Group 7 Hamburger Project
 
-from random import randint as rd 
+from random import randint as rd
+
 
 class Order():
     def __init__(self):
         self.burger_count = 0
-    
+
     def randomBurger():
-        return rd(1,20)
+        return rd(1, 20)
 
-
-class Customer ():
+class Person :
     
     pass
+
+
+class Customer(Person):
+    def _innit__(self, iCustomers):
+        super().__innit__()
+        self.order = Order()
+        self.customerID = iCustomers
 
 
 lstHamburgerQueue = []
 
 iNumCustomers = 100
 
-while iNumCustomers > 0 :
-    
-    lstHamburgerQueue.append(Customer())
-    iNumCustomers -=1
+while iNumCustomers > 0:
 
-class Customer(Person): 
-    def _innit__ (self): 
-      super().__innit__()
-      self.order = Order()
+    lstHamburgerQueue.append(Customer(iNumCustomers))
+    iNumCustomers -= 1
+
