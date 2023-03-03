@@ -5,6 +5,7 @@ from random import randint as rd
 import random
 
 
+
 class Order():
     def __init__(self):
         self.burger_count = self.randomBurger()

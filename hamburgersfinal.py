@@ -10,7 +10,6 @@ class Order():
     def randomBurger(self):
         return random.randint(1, 20)
 
-
 class Person():
     # constructor
     def __init__(self):
