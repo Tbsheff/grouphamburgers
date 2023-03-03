@@ -39,7 +39,7 @@ class Customer(Person):
 #create queue
 lstHamburgerQueue = []
 
-
+#create a variable for a Dictionary with keys of type string and values of type int
 dictCustomers = {
     "Jefe": 0,
     "El Guapo": 0,
@@ -52,10 +52,10 @@ dictCustomers = {
     "Singing Bush": 0
 }
 
-
+#put 100 customers into the queue
 iNumCustomers = 100
 
-
+#add customer object to queue and keep track of the number of orders they make
 for iCount in range(0, iNumCustomers):
 
     lstHamburgerQueue.append(Customer())
@@ -67,7 +67,7 @@ for iCount in range(0, iNumCustomers):
 listSortedCustomers = sorted(
     dictCustomers.items(), key=lambda x: x[1], reverse=True)
 
-#print out each customer and their total burgers
+#print out each customer and their total number burgers
 for iCount in range(0, len(listSortedCustomers)):
     print(
         f'{listSortedCustomers[iCount][0].ljust(19)}\t{listSortedCustomers[iCount][1]}')
