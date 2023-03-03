@@ -4,6 +4,7 @@ from random import randint as rd
 import random
 
 
+
 class Order():
     def __init__(self):
         self.burger_count = self.randomBurger()
@@ -50,7 +51,7 @@ iNumCustomers = 0
 lstHamburgerQueue.append(Customer())
 
 print(lstHamburgerQueue[iNumCustomers].customer_name)
-if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
+   if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
         dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
     iNumCustomers += 1
 
