@@ -8,19 +8,21 @@ import random
 
 #create order class 
 class Order():
+    #create a constructor that defines an instance variable called burger_count
     def __init__(self):
         self.burger_count = self.randomBurger()
 
-#create method to generate random burger count 
+    #create a method called randomBurgers that returns a number between 1 and 20
     def randomBurger(self):
         return random.randint(1, 20)
 
 #create person class 
 class Person():
+    #create a constructor that defines an instance variable called customer_name
     def __init__(self):
         self.customer_name = self.randomName()
    
-    #method to generate a random customer from a list 
+    #create a method called randomName() that contains a list of 9 names
     def randomName(self):
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms",
                         "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
@@ -28,8 +30,10 @@ class Person():
 
 #create customer class that inherits from the person class 
 class Customer(Person):
+    #create a constructor that calls the parent constructor
     def __init__(self):
         super().__init__()
+        #create an instance variable called order in the constructor that is assigned an order object
         self.order = Order()
 
 
