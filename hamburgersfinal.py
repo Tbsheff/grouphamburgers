@@ -59,6 +59,7 @@ for iCount in range(0, iNumCustomers):
 listSortedCustomers = sorted(
     dictCustomers.items(), key=lambda x: x[1], reverse=True)
 
+#print out each customer and their total burgers
 for iCount in range(0, len(listSortedCustomers)):
     print(
         f'{listSortedCustomers[iCount][0].ljust(19)}\t{listSortedCustomers[iCount][1]}')
