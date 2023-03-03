@@ -1,7 +1,9 @@
-# Group 7 Hamburger Project
+#Group 7: Tyler Sheffield, Brendon Bundy, Martin Villar, Camille Cameron, Savannah Hogan, & Hannah
+#Hamburger Project
 
 from random import randint as rd
 import random
+
 
 
 class Order():

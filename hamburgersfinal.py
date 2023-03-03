@@ -36,7 +36,7 @@ class Customer(Person):
         #create an instance variable called order in the constructor that is assigned an order object
         self.order = Order()
 
-
+#create queue
 lstHamburgerQueue = []
 
 
@@ -63,10 +63,11 @@ for iCount in range(0, iNumCustomers):
         dictCustomers[lstHamburgerQueue[0].customer_name] += lstHamburgerQueue[0].order.burger_count
     lstHamburgerQueue.pop(0)
 
-
+#sort customers by the most number of burgers ordered to the least number ordered
 listSortedCustomers = sorted(
     dictCustomers.items(), key=lambda x: x[1], reverse=True)
 
+#print out each customer and their total burgers
 for iCount in range(0, len(listSortedCustomers)):
     print(
         f'{listSortedCustomers[iCount][0].ljust(19)}\t{listSortedCustomers[iCount][1]}')
