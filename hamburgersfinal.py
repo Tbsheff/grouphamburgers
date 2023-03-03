@@ -1,36 +1,45 @@
-#Group 7 Hamburger Project: Tyler Sheffield, Brendon Bundy, Martin Villar, Hannah Camille Cameron, Savannah Hogan, & Hannah Johnson
+#Group 7: Tyler Sheffield, Brendan Bundy, Camille (Hannah) Cameron, Hannah Johnson, Martin Villar, Savannah Hogan
+#Hamburger Group Project 
+#This projects creates and stores a dictionary of customers from a list, 
+#randomizes orders for each customer, and tracks the total number of hamburgers ordered 
 
+#import random
 import random
 
-
+#create order class 
 class Order():
+    #create a constructor that defines an instance variable called burger_count
     def __init__(self):
         self.burger_count = self.randomBurger()
 
+    #create a method called randomBurgers that returns a number between 1 and 20
     def randomBurger(self):
         return random.randint(1, 20)
 
+#create person class 
 class Person():
-    # constructor
+    #create a constructor that defines an instance variable called customer_name
     def __init__(self):
         self.customer_name = self.randomName()
-    # method
-
+   
+    #create a method called randomName() that contains a list of 9 names
     def randomName(self):
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms",
                         "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
         return random.choice(lstCustomers)
 
-
+#create customer class that inherits from the person class 
 class Customer(Person):
+    #create a constructor that calls the parent constructor
     def __init__(self):
         super().__init__()
+        #create an instance variable called order in the constructor that is assigned an order object
         self.order = Order()
 
 #create queue
 lstHamburgerQueue = []
 
-#create dictionary with keys of type string and variables of type int
+
 dictCustomers = {
     "Jefe": 0,
     "El Guapo": 0,
@@ -43,10 +52,10 @@ dictCustomers = {
     "Singing Bush": 0
 }
 
-#put 100 customers into the queue
+
 iNumCustomers = 100
 
-#add customer object to queue and keep track of the number of orders they make
+
 for iCount in range(0, iNumCustomers):
 
     lstHamburgerQueue.append(Customer())
