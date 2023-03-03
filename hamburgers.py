@@ -8,7 +8,7 @@ class Order():
     def __init__(self):
         self.burger_count = self.randomBurger()
 
-    def randomBurger():
+    def randomBurger(self):
         return rd.randint(1, 20)
 
 
@@ -50,8 +50,8 @@ iNumCustomers = 0
 lstHamburgerQueue.append(Customer())
 
 print(lstHamburgerQueue[iNumCustomers].customer_name)
-   if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
-        dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
+if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
+    dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
     iNumCustomers += 1
 
 
