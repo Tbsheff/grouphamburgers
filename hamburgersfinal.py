@@ -7,7 +7,7 @@ class Order():
     def __init__(self):
         self.burger_count = self.randomBurger()
 
-    def randomBurger():
+    def randomBurger(self):
         return random.randint(1, 20)
 
 
