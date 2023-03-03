@@ -1,4 +1,5 @@
-# Group 7 Hamburger Project
+#Group 7: Tyler Sheffield, Brendon Bundy, Martin Villar, Camille Cameron, Savannah Hogan, & Hannah
+#Hamburger Project
 
 import random
 
