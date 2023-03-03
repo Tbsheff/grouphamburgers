@@ -1,9 +1,9 @@
-# grouphamburgers\n
-Group Python Class Project\n
-Tyler Sheffield\n
-Martin Villar\n
-Brendan Bundy\n
-Hannah Cameron\n
-Hannah Johnson\n
+# grouphamburgers
+Group Python Class Project
+Tyler Sheffield
+Martin Villar
+Brendan Bundy
+Hannah Cameron
+Hannah Johnson
 Savannah Hogan
 
