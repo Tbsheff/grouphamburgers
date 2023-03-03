@@ -1,4 +1,4 @@
-# Group 7 Hamburger Project
+# Group 7 Hamburger Project 
 
 import random
 
