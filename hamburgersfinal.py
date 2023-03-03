@@ -1,7 +1,5 @@
-#Group 7: Tyler Sheffield, Brendon Bundy, Martin Villar, Camille Cameron, Savannah Hogan, & Hannah
-#Hamburger Project
+# Group 7 Hamburger Project
 
-from random import randint as rd
 import random
 
 
@@ -10,7 +8,7 @@ class Order():
         self.burger_count = self.randomBurger()
 
     def randomBurger(self):
-        return rd.randint(1, 20)
+        return random.randint(1, 20)
 
 
 class Person():
@@ -21,7 +19,7 @@ class Person():
 
     def randomName(self):
         lstCustomers = ["Jefe", "El Guapo", "Lucky Day", "Ned Nederlander", "Dusty Bottoms",
-            "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
+                        "Harry Flugleman", "Carmen", "Invisible Swordsman", "Singing Bush"]
         return random.choice(lstCustomers)
 
 
@@ -29,7 +27,6 @@ class Customer(Person):
     def __init__(self):
         super().__init__()
         self.order = Order()
-        self.numBurgers = 0
 
 
 lstHamburgerQueue = []
@@ -46,14 +43,14 @@ dictCustomers = {
     "Singing Bush": 0
 }
 
-iNumCustomers = 0
+iNumCustomers = 100
 
-lstHamburgerQueue.append(Customer())
+for iCount in range(0, iNumCustomers):
 
-print(lstHamburgerQueue[iNumCustomers].customer_name)
-if lstHamburgerQueue[iNumCustomers].customer_name in dictCustomers:
-    dictCustomers[lstHamburgerQueue[iNumCustomers].customer_name] += lstHamburgerQueue[iNumCustomers].order
-    iNumCustomers += 1
+    lstHamburgerQueue.append(Customer())
+    if lstHamburgerQueue[0].customer_name in dictCustomers:
+        dictCustomers[lstHamburgerQueue[0].customer_name] += lstHamburgerQueue[0].order.burger_count
+    lstHamburgerQueue.pop(0)
 
 
 listSortedCustomers = sorted(
