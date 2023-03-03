@@ -7,8 +7,6 @@
 import random
 
 # create order class
-
-
 class Order():
     # create a constructor that defines an instance variable called burger_count
     def __init__(self):
@@ -19,8 +17,6 @@ class Order():
         return random.randint(1, 20)
 
 # create person class
-
-
 class Person():
     # create a constructor that defines an instance variable called customer_name
     def __init__(self):
@@ -33,8 +29,6 @@ class Person():
         return random.choice(lstCustomers)
 
 # create customer class that inherits from the person class
-
-
 class Customer(Person):
     # create a constructor that calls the parent constructor
     def __init__(self):
